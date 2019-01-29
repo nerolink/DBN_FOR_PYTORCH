@@ -3,7 +3,7 @@ import torch.nn.functional as F
 from __future__ import print_function
 
 
-class RBM(torch.nn.Module):
+class RBM(object):
 
     def __init__(self, input_size, output_size, name, params):
         super().__init__()
@@ -69,7 +69,6 @@ class RBM(torch.nn.Module):
         """
         return RBM.sample_from_probability(RBM.probability_h_to_v(hidden, weights, v_bias))
 
-    def forward(self, *input):
-
+    def train(self,data):
 
 
